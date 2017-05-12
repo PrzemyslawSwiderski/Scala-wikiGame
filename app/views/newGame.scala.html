@@ -1,0 +1,17 @@
+@()
+@import helper._
+@*
+* Call the `main` template with two arguments. The first
+* argument is a `String` with the title of the page, the second
+* argument is an `Html` object containing the body of the page.
+*@
+@main("New Game") {
+    <h2>NewGame</h2>
+
+    <a href="@routes.HomeController.index()" class="btn btn-default">Go back</a>
+
+    <p>All Players:</p>
+    <ul id="players"></ul>
+
+    <script type='text/javascript' src='@routes.Assets.versioned("javascripts/index.js")'></script>
+}
