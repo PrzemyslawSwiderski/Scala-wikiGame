@@ -9,9 +9,9 @@ GET         /count               controllers.CountController.count
 # An example controller showing how to write asynchronous code
 GET         /message             controllers.AsyncController.message
 
-GET         /players             controllers.HomeController.getPlayers
+GET         /api/players             controllers.HomeController.getPlayers
 
-POST        /players             controllers.HomeController.addPlayers
+POST        /api/players             controllers.HomeController.addPlayers
 
 GET         /newGame             controllers.NewGameController.index
 

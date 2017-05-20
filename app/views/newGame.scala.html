@@ -5,13 +5,44 @@
 * argument is a `String` with the title of the page, the second
 * argument is an `Html` object containing the body of the page.
 *@
+
+<div class="container jumbotron">
 @main("New Game") {
     <h2>NewGame</h2>
 
     <a href="@routes.HomeController.index()" class="btn btn-default">Go back</a>
 
     <p>All Players:</p>
-    <ul id="players"></ul>
+    @*<ul id="players"></ul>*@
+    <div class="row">
+        <div class="col-md-6">
+            <label for="fsq">First search query:</label>
+        </div>
+        <div class="col-md-6">
+            <input type="text" class="form-control" id="fsq">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <label for="esq">End search query:</label>
+        </div>
+        <div class="col-md-6">
+            <input type="text" class="form-control" id="esq">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <a id="start_btn" class="btn btn-success">Start</a>
+        </div>
+    </div>
 
+    <div class="row" style="margin-top: 50px">
+        <div class="col-md-12">
+            <div id="wikiPage"></div>
+        </div>
+    </div>
+
+    <script type='text/javascript' src='@routes.Assets.versioned("javascripts/game.js")'></script>
     <script type='text/javascript' src='@routes.Assets.versioned("javascripts/index.js")'></script>
 }
+</div>
